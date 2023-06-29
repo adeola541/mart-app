@@ -1,38 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    
 }
-
+/* 
 a {
-  color: inherit;
-  text-decoration: none;
-}
+  @apply text-blue-600 hover:text-blue-800;
+} */
 
 * {
   box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.card {
+  @apply mb-5  block   rounded-lg border border-gray-200  shadow-md;
 }
 
-h1,
-h2,
-p,
-ul {
-  margin: 0;
+.primary-button {
+  @apply rounded bg-amber-300 py-2 px-4 shadow outline-none hover:bg-amber-400  active:bg-amber-500;
+}
+.default-button {
+  @apply rounded bg-gray-100 py-2  px-4 text-black shadow outline-none hover:bg-gray-200  active:bg-gray-300;
 }
 
+input,
+select,
+textarea {
+  @apply rounded border p-2  outline-none ring-indigo-300  focus:ring;
+}
+
+
+
+.alert-error {
+  @apply my-3 rounded-lg bg-red-100 p-3 text-red-700;
+}
+
+.alert-success {
+  @apply my-3 rounded-lg bg-green-100 p-3 text-green-700;
+}
+
+
+.round-btn {
+  @apply inline h-10 w-10 float-left   mx-3 my-[15px] rounded-[50%] ;
+ 
+}
+.round-btn a {
+  @apply block text-lg px-3 py-[7px] rounded-[50%];
+}
+.round-btn .icon {
+  @apply p-[3px];
+}
+.round-btn .icon img {
+  @apply h-6 w-8 mt-1.5;
+}
+
+
+.standard_header .standard_social_links {
+  @apply ml-4;
+}
+
+/*
+  =========================================================================================
+                                    footer
+  =========================================================================================
+  */
+.footer-wrap {
+  @apply bg-cover pt-[23px];
+}
+.footer-wrap h3 {
+  @apply text-white text-[17px] uppercase mb-[25px];
+}
+.footer-wrap p {
+  @apply text-[13px] leading-6 text-[#b3b3b3] mt-[15px];
+}
+.footer-wrap p a {
+  @apply text-white underline italic hover:no-underline hover:text-[#ff7800];
+}
+.footer-links .Link {
+  @apply text-[13px] leading-[30px] text-[#ccc] no-underline;
+}
+.footer-links .Link {
+  @apply content-["\f105"] text-[#ccc] pr-2.5;
+  font-family: "FontAwesome";
+}
+.footer-category .Link {
+  @apply text-[13px] leading-[30px] text-[#ccc] no-underline;
+}
+.footer-category .Link {
+  @apply content-["\f105"] text-[#b3b3b3] pr-2.5;
+  font-family: "FontAwesome";
+}
+.address {
+  @apply text-[#b3b3b3] text-sm relative leading-[30px] pl-[30px] before:content-["\f277"] before:absolute before:left-0 before:top-0;
+}
+.address:before {
+  font-family: "FontAwesome";
+}
+.info a {
+  @apply text-[#b3b3b3] text-sm leading-[30px] font-[normal] text-[#b3b3b3] text-sm leading-[30px] font-[normal];
+}
+.fa-phone:before {
+  @apply content-["\f095"];
+}
+.fa-fax:before {
+  @apply content-["\f1ac"];
+}
+.copyright {
+  @apply text-sm text-[#ccc] text-center py-[15px] border-t-[#111] border-t border-solid;
+  background: #000000;
+}
+footer .second_class {
+  @apply pb-[25px] border-b-[#000] border-b border-solid;
+}
+footer .first_class {
+  @apply pb-[21px] border-b-[#181717] border-b border-solid;
+}
+footer .first_class p,
+footer .first_class h3 {
+  @apply m-0;
+}
+footer {
+  background: #000000;
+}
+footer .newsletter input[type="text"] {
+  @apply w-full text-[#333] border mt-3 px-5 py-3.5 rounded-[50px] border-solid border-[#222];
+  background: #fff;
+}
+.newsletter .newsletter_submit_btn {
+  @apply absolute text-[17px] text-[#f4eeee] border-0 right-[30px] top-[26px];
+  background: #0f0404;
+}
+footer .second_class_bdr {
+  @apply pt-[25px] border-t-[#222] border-t border-solid;
+}
+footer .btn-facebook a {
+  @apply px-3.5 py-1.5;
+}
+footer .btn-envelop a {
+  @apply text-[#D6403A] text-[15px] p-3;
+}
+footer .round-btn a {
+  @apply px-3 py-1.5;
+}
+footer .round-btn {
+  @apply shadow-[2px_2px_5px_0px_#222] mx-1 my-[15px];
+}
+footer dl,
+ol,
 ul {
-  padding: 0;
+  @apply pl-[5px];
+}
+footer li {
   list-style: none;
 }
-
-button {
-  padding: 0.5rem 1rem;
-  font-weight: bold;
+@media (max-width: 768px) {
+  .footer-wrap h3 {
+    @apply mt-[27px];
+  }
+  footer .round-btn {
+    @apply mx-1 my-[15px];
+  }
 }
+@media (max-width: 320px) {
+  .copyright {
+    @apply text-[13px];
+  }
+}
+
