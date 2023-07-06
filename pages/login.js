@@ -9,7 +9,6 @@ import {
 } 
 from "@heroicons/react/outline";
 import { useState } from "react";
-import axios from 'axios';
 
 const login = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,12 +17,7 @@ const login = () => {
     e.preventDefault();
     router.push(`/search?query=${query}`)
   };
-  function loginUser(e){
-    e.preventDefault();
 
-    const data ={email, password}
-    axios.post(url:'', data);
-  }
   return (             
                <>
                   < div className=' bg-black text-white'> 
