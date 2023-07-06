@@ -59,10 +59,10 @@ const reviews = { href: '#', average: 4, totalCount: 117 }
 function classNames(...classes) {
                return classes.filter(Boolean).join(' ')
              } 
-const Feature = () => {
-               const [selectedColor, setSelectedColor] = useState(product.colors[0])
-               const [selectedSize, setSelectedSize] = useState(product.sizes[2])
-}
+// const Feature = () => {
+//                const [selectedColor, setSelectedColor] = useState(product.colors[0])
+//                const [selectedSize, setSelectedSize] = useState(product.sizes[2])
+// }
 const order = () => {
   return (
    <>

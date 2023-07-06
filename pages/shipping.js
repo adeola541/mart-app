@@ -30,7 +30,7 @@ const shipping = () => {
               required ='Please enter address'
               
           />
-            <div className="text-red-500">{errors.address.message}</div>
+            <div className="text-red-500"></div>
         </div>
         <div className="mb-4">
           <label htmlFor="city">City</label>

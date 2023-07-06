@@ -8,15 +8,9 @@ import {
   ShoppingCartIcon 
 } 
 from "@heroicons/react/outline";
-import { useState } from "react";
 
 const login = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
-  const submitHandler = (e) =>{
-    e.preventDefault();
-    router.push(`/search?query=${query}`)
-  };
+
 
   return (             
                <>
@@ -263,7 +257,7 @@ const login = () => {
              <form
              action=""
                  className=" mx-auto max-w-screen-md"
-                 onSubmit={e => loginUser(e)}
+                 
 
                >
                  <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Login</h1>
@@ -274,8 +268,8 @@ const login = () => {
                      className="w-full"
                      id="email"
                      autoFocus
-                     value={email}
-                     onChange={e => setEmail (e.target.value)}
+                     value=""
+                     onChange=""
                    >                   
                    </input>
                      <div className="text-red-500"></div>
@@ -288,8 +282,8 @@ const login = () => {
                      className="w-full"
                      id="password"
                      autoFocus
-                     value={password}
-                     onChange={e => setPassword (e.target.value)}
+                     value=""
+                     onChange=""
                      />
                    
                  </div>
