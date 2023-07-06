@@ -9,13 +9,21 @@ import {
 } 
 from "@heroicons/react/outline";
 import { useState } from "react";
+import axios from 'axios';
 
 const login = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
   const submitHandler = (e) =>{
     e.preventDefault();
     router.push(`/search?query=${query}`)
   };
+  function loginUser(e){
+    e.preventDefault();
+
+    const data ={email, password}
+    axios.post(url:'', data);
+  }
   return (             
                <>
                   < div className=' bg-black text-white'> 
@@ -259,7 +267,10 @@ const login = () => {
         </header>
         <div className="mx-auto max-w-2xl text-center">
              <form
+             action=""
                  className=" mx-auto max-w-screen-md"
+                 onSubmit={e => loginUser(e)}
+
                >
                  <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Login</h1>
                  <div className="mb-4">
@@ -269,6 +280,8 @@ const login = () => {
                      className="w-full"
                      id="email"
                      autoFocus
+                     value={email}
+                     onChange={e => setEmail (e.target.value)}
                    >                   
                    </input>
                      <div className="text-red-500"></div>
@@ -281,7 +294,9 @@ const login = () => {
                      className="w-full"
                      id="password"
                      autoFocus
-                   ></input>
+                     value={password}
+                     onChange={e => setPassword (e.target.value)}
+                     />
                    
                  </div>
                  <div className="mb-4 ">

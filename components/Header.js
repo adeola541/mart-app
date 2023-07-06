@@ -13,6 +13,7 @@ import { useState } from "react";
 import Bannner from "./Bannner";
 import Section from "./Section";
 import Footer from "./Footer";
+import Filter from "./Filter";
 
 
 const Header = () => {
@@ -82,31 +83,13 @@ const Header = () => {
                 <Link  
                 className="text-white no-underline 
                 "href="/contact">Contacts</Link>
-            </ul>
-
-            <form 
-            onSubmit={submitHandler}
-              className="mx-auto  hidden
-            justify-center md:flex px-8 text-white"
-            
-            >
-              <input
-                onChange={(e) => setQuery(e.target.value)}
-                type="text"
-                className="rounded-tr-none rounded-br-none 
-              p-0.5 text-sm   focus:ring-0"
-                placeholder="Search products"
-                
-              />
-                 <button
-                className="rounded rounded-tl-none rounded-bl-none bg-white p-1 text-sm dark:text-black"
-                type="submit"
-                id="button-addon2"
-              >
-                <SearchIcon className="h-5 w-5"></SearchIcon>
-              </button>
              
-            </form>
+                <Link  
+                className="text-white no-underline 
+                "href="/serach">Search</Link>
+            </ul>
+       
+              
             
             <div
               className=" lg:flex lg:flex-1 lg:justify-end 
@@ -228,7 +211,7 @@ const Header = () => {
                   </div>
 
                   <div className="py-6">
-                    <form
+                    {/* <form
                       className="mx-auto  
                     justify-center md:flex"
                     >
@@ -246,7 +229,7 @@ const Header = () => {
               >
                 <SearchIcon className="h-5 w-5"></SearchIcon>
               </button>
-                    </form>
+                    </form> */}
                     <Menu as="div" className=" text-white  relative inline-block">
                   <ShoppingCartIcon className="h-4 w-4" aria-hidden="true " />
                 </Menu>
@@ -272,6 +255,7 @@ const Header = () => {
           </Dialog>
         </header>
         <div>
+          <Filter/>
            <Bannner />
           <Section/>
           <Footer/> 
