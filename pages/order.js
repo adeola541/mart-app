@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { StarIcon } from '@heroicons/react/outline'
 import { RadioGroup } from '@headlessui/react'
-
+ 
 const product = {
   name: 'Basic Tee 6-Pack',
   price: '$192',
@@ -59,10 +59,7 @@ const reviews = { href: '#', average: 4, totalCount: 117 }
 function classNames(...classes) {
                return classes.filter(Boolean).join(' ')
              } 
-// const Feature = () => {
-//                const [selectedColor, setSelectedColor] = useState(product.colors[0])
-//                const [selectedSize, setSelectedSize] = useState(product.sizes[2])
-// }
+
 const order = () => {
   return (
    <>
@@ -170,7 +167,7 @@ const order = () => {
               <div>
                 <h3 className="text-sm font-medium text-gray-900">Color</h3>
 
-                <RadioGroup value={selectedColor} onChange={setSelectedColor} className="mt-4">
+                <RadioGroup value="" onChange="" className="mt-4">
                   <RadioGroup.Label className="sr-only">Choose a color</RadioGroup.Label>
                   <div className="flex items-center space-x-3">
                     {product.colors.map((color) => (

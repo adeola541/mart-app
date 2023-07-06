@@ -1,12 +1,12 @@
 import React from 'react'
-import Checkout from '../components/Checkout'
+// import Checkout from '../components/Checkout'
 import Header from '../components/Header'
 
 const shipping = () => {
   return (
     <>
       <Header title="Shipping Address"/>
-      <Checkout activeStep={1} />
+      {/* <Checkout activeStep={1} /> */}
       <form
         className="mx-auto max-w-screen-md"
       >

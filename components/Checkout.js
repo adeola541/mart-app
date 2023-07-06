@@ -1,9 +1,9 @@
-import React from "react";
+// import React from "react";
 
 const Checkout = () => {
   return (
     <>
-      <div className="mb-5 flex flex-wrap">
+      {/* <div className="mb-5 flex flex-wrap">
         {[
           "User Login",
           "Shipping Address",
@@ -25,7 +25,7 @@ const Checkout = () => {
             {step}
           </div>
         ))}
-      </div>
+      </div> */}
     </>
   );
 };
