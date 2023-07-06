@@ -66,30 +66,6 @@ const login = () => {
                 "href="/contact">Contacts</Link>
             </ul>
 
-            <form 
-            onSubmit={submitHandler}
-              className="mx-auto  hidden
-            justify-center md:flex px-8 text-white"
-            
-            >
-              <input
-                onChange={(e) => setQuery(e.target.value)}
-                type="text"
-                className="rounded-tr-none rounded-br-none 
-              p-0.5 text-sm   focus:ring-0"
-                placeholder="Search products"
-                
-              />
-                 <button
-                className="rounded rounded-tl-none rounded-bl-none bg-white p-1 text-sm dark:text-black"
-                type="submit"
-                id="button-addon2"
-              >
-                <SearchIcon className="h-5 w-5"></SearchIcon>
-              </button>
-             
-            </form>
-            
             <div
               className=" lg:flex lg:flex-1 lg:justify-end 
           -mx-3 block rounded-lg px-3 py-2.5 text-base 
@@ -256,10 +232,7 @@ const login = () => {
         <div className="mx-auto max-w-2xl text-center">
              <form
              action=""
-                 className=" mx-auto max-w-screen-md"
-                 
-
-               >
+                 className=" mx-auto max-w-screen-md">
                  <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Login</h1>
                  <div className="mb-4">
                    <label htmlFor="email">Email</label>
